@@ -2,7 +2,7 @@
 import {
   Form,
   useActionData,
-  Link
+
 } from "@remix-run/react";
 import {
   Button,
@@ -11,7 +11,7 @@ import {
   Container,
   Box
 } from "@mui/material";
-import { authenticator } from "~/services/_auth.server";
+import { authenticator } from "../services/_auth.server";
 import { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
 
 export async function loader({ request }: LoaderFunctionArgs) {

@@ -12,9 +12,9 @@ import {
 import { Delete } from '@mui/icons-material';
 import { useLoaderData, Form } from '@remix-run/react';
 import { LoaderFunctionArgs, ActionFunctionArgs } from '@remix-run/node';
-import { authenticator } from '~/services/_auth.server';
-import { prisma } from '~/services/db.server';
-import { getWeatherForCity, WeatherData } from '~/services/weather.server';
+import { authenticator } from '../services/_auth.server';
+import { prisma } from '../services/_db.server';
+import { getWeatherForCity, WeatherData } from '../services/weather.server';
 
 export async function loader({ request }: LoaderFunctionArgs) {
     const user = await authenticator.isAuthenticated(request, {
